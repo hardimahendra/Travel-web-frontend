@@ -81,15 +81,13 @@ header {
     position: relative;
     height: 100vh;
     width: 100%;
-    overflow: hidden;
     z-index: 2;
-}
-header video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    object-fit: cover;
-    z-index: -2;
+    background:url('assets/img/heri-gunawan-_nha3reaFao-unsplash.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
 }
 header .intro {
     z-index: 100;
@@ -113,16 +111,6 @@ header .intro h3 {
     padding: 0px 20px 0px 20px;
     font-size: 15px;
     border-radius: 4px;
-}
-header .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: #000;
-    opacity: 50%;
-    z-index: -1;
 }
 .tombol-menu {
     position: absolute;
