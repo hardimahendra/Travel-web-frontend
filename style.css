@@ -1,0 +1,451 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 20px;
+    font-size: 15px;
+}
+html,
+body {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+.layar-dalam {
+    width: 1000px;
+    margin: auto;
+}
+.layar-penuh {
+    width: 100%;
+}
+nav {
+    z-index: 100;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    border-bottom: 1px solid #b1b1b1;
+    line-height: 60px;
+    width: 100%;
+    transition: background-color 0.5s ease;
+}
+nav.putih {
+    background-color: #fff;
+}
+nav .logo {
+    float: left;
+    position: relative;
+    line-height: 55px;
+    text-align: center;
+    padding-left: 10px;
+}
+nav .logo img {
+    vertical-align: middle;
+    width: 120px;
+}
+
+nav .menu {
+    float: right;
+    right: 60px;
+    max-width: 600px;
+}
+
+nav .menu ul {
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav .menu ul li {
+    list-style-type: none;
+    float: left;
+    line-height: 60px;
+}
+
+nav .menu ul li a {
+    color: #fff;
+    text-align: center;
+    padding: 0px 16px;
+    text-decoration: none;
+    transition:0.2s;
+    width:100px;
+}
+nav .menu ul li a:hover {
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    color:#333;
+}
+
+/* pengaturan header */
+header {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    z-index: 2;
+}
+header video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: -2;
+}
+header .intro {
+    z-index: 100;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    top: 50%;
+}
+header .intro h3 {
+    font-size: 50px;
+    margin: 0;
+    padding: 0;
+}
+.tombol {
+    background-color: #c86b85;
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0px 20px 0px 20px;
+    font-size: 15px;
+    border-radius: 4px;
+}
+header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    opacity: 50%;
+    z-index: -1;
+}
+.tombol-menu {
+    position: absolute;
+    top:1.7rem;
+    right: 1rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+}
+.tombol-menu .garis {
+    height: 3px;
+    background-color: #fff;
+}
+section {
+    padding: 50px 0px;
+}
+section h3 {
+    font-size: 30px;
+}
+section h3::after {
+    content: "";
+    border-bottom: 5px solid #c86b85;
+    width: 52px;
+    display: block;
+    margin: 20px auto;
+}
+#aboutus,
+#team,
+#blog {
+    text-align: center;
+}
+section p.ringkasan {
+    font-style: italic;
+    font-size: 18px;
+    color: #ababab;
+}
+section .konten-isi p {
+    font-style: normal;
+}
+nav.putih {
+    background-color: #fff;
+}
+nav.putih .tombol-menu .garis {
+    background-color: #333;
+}
+nav.putih ul li a {
+    color: #333;
+}
+nav .logo img.hitam {
+    display: none;
+}
+section.abuabu {
+    background-color: #f5f6f6;
+}
+.support, 
+.tim,
+.blog {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.support h6, 
+.tim h6 {
+    margin: 0px;
+    margin-top: 20px;
+    padding: 0px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.support img {
+    width: 50px;
+}
+.support div, 
+.tim div {
+    text-align: center;
+    width: 26%;
+}
+section#gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 10px 0px;
+}
+
+#gallery .travel-plans{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+.travel-plans .card-wrapper {
+    display: flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    align-items:center;
+}
+.travel-plans figure{
+    object-fit:cover;
+    border-top-right-radius:15px;
+    border-top-left-radius:15px;
+}
+.travel-plans .card{
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    text-align:center;
+    justify-content:center;
+    align-items:center;
+    background-color:#eee;
+    width:400px;
+    height:450px;
+    box-shadow: 0px -5px 20px #ccc;
+}
+.travel-plans figure img{
+    position:absolute;
+    top:0;
+    width:400px;
+    height:250px;
+    border-top-right-radius:15px;
+    border-top-left-radius:15px;
+    transition:0.3s ease-in-out;
+}
+.travel-plans figure img:hover{
+    transform:scale(1.1);
+}
+
+.travel-plans figure .destinasi-info{
+    position:absolute;
+    display:flex;
+    flex-direction:column;
+    bottom:20%;
+    text-align:center;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+}
+.travel-plans figure .destinasi-info h2 {
+    margin:0;
+    padding:0;
+    font-size:22px;
+}
+.travel-plans figure .destinasi-info p{
+    font-size:16px;
+    font-style:italic;
+    font-weight:normal;
+}
+.travel-plans figure button{
+    position:absolute;
+    bottom:5%;
+    width:100px;
+    height:45px;
+    border-radius:10px;
+    background:#333;
+    color:white;
+    box-shadow:0 0 10px #333;
+    transition: 0.2s;
+}
+.travel-plans figure button:hover{
+    transform:translateY(3px);
+}
+section.quote {
+    background:url('assets/img/background-bromo.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    font-style: italic;
+    padding: 100px 0;
+}
+section.quote .layar-dalam p {
+    display: inline;
+    background: url("assets/icons/quote-icon.png") no-repeat;
+    padding: 40px;
+}
+.blog{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+}
+.blog .area {
+    width: 450px;
+    box-shadow: 0px -10px 30px #ccc;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin:0 20px;
+}
+.blog div.area div {
+    width: 50%;
+}
+.blog .area .gambar {
+    border-radius: 5px 0px 0px 5px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    transition:0.3s;
+}
+.blog .area .gambar:hover{
+transform:scale(1.1);
+}
+.blog .area text article {
+    padding: 40px;
+}
+.blog .area .text article h4 {
+    margin: 30px;
+}
+.blog .area .text article a {
+    color: #333;
+    text-decoration: none;
+    word-break: break-word;
+    transition: color 0.5s ease;
+}
+.blog .area .text article a:hover {
+    color: #ccc;
+}
+footer {
+    padding: 50px 0px 50px 0px;
+    background-color: #343a40;
+    color: #fff;
+}
+footer .layar-dalam {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+}
+footer .layar-dalam div {
+    width: 100%;
+}
+.layar-dalam .social-media{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+.layar-dalam .social-media i{
+    width: 100%;
+}
+.layar-dalam .social-media .fa-instagram {
+    color: rgb(255, 71, 102);
+}
+.layar-dalam .social-media a {
+    color: white;
+    padding-left:5px;
+    text-decoration: none;
+}
+.layar-dalam .social-media a:hover{
+    color: rgb(255, 71, 102);
+}
+footer .layar-dalam h5 {
+    margin-top: 0px;
+    font-size: 20px;
+    font-weight: bold;
+}
+footer .layar-dalam .copyright {
+    width: 100%;
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid #666;
+    text-align: center;
+}
+footer .layar-dalam .copyright a{
+    color: rgb(255, 71, 102);
+}
+.layar-dalam .copyright a:hover{
+    color:white;
+}
+@media screen and (max-width: 991.98px) {
+    .layar-dalam {
+        width: 90%;
+    }
+    nav .menu ul {
+        display: none;
+        margin-top: 55px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    nav .menu ul li {
+        width: 100%;
+        border-bottom: 1 px solid #ccc;
+        line-height: 40px;
+    }
+    nav .menu ul li a {
+        color: #333;
+    }
+    nav .menu ul li a:hover{
+        color:white;
+    }
+    .tombol-menu {
+        display: flex;
+    }
+    .blog .area {
+        display: block;
+    }
+    .blog div.area div {
+        width: 100%;
+    }
+    .blog .area .gambar {
+        border-radius: 5px 5px 0px 0px;
+        height: 200px;
+    }
+    .support {
+        display: block;
+    }
+    .support div {
+        width: 100%;
+        padding-bottom: 30px;
+    }
+}
